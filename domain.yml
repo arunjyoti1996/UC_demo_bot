@@ -1,0 +1,188 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- more_information
+- search_hospital
+- Thank_you
+- corona_state
+- my_name
+- my_country
+- check_symptons
+- finance_benifits
+- medicine
+- emergency_care
+- corona_live
+- back_me
+- disease_type_hospital
+- doctor_consult
+- doctor_available
+- feed_back
+- registration
+- submit
+- number_entry
+- email_entry
+entities:
+- state
+- name
+- country
+- number
+- email
+slots:
+  country:
+    type: text
+  email:
+    type: unfeaturized
+  leader:
+    type: text
+  name:
+    type: text
+  name_title:
+    type: text
+  number:
+    type: unfeaturized
+responses:
+  utter_greet_help:
+  - text: Hey! How can i help you?
+  utter_greet:
+  - text: Hey! How are you?
+  utter_enter_state:
+  - text: 'Please Enter State name do you want. '
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a AI bot, processed by Arun.
+  utter_thank_you:
+  - text: "welcome to UltraCures.\nThank you"
+  utter_greet_name:
+  - text: Hey ! Please enter you name
+  utter_greet_country_name:
+  - text: 'Hey {name_title}, Please enter your country name '
+  utter_greet_name_help:
+  - text: '{name_title}! How can i help you?'
+  utter_show_country_pm:
+  - text: 'My name is {name_title},I am from {country} our PM is {leader} '
+  utter_howto_help:
+  - buttons:
+    - payload: /check_symptons
+      title: CHECK SYMPOTONS
+    - payload: /finance_benifits
+      title: INSTANCE FINANCE BENIFITS
+    - payload: /medicine
+      title: MEDICINE
+    - payload: /corona_live
+      title: CORONA STATUS
+    - payload: /emergency_care
+      title: EMERGENCY CARE
+    text: Hey! How can I help you?
+  utter_check_sympton:
+  - buttons:
+    - payload: /disease_type_hospital
+      title: FIND DISEASE TYPE HOSPITAL(Get Upto 20% OFF)
+    - payload: /doctor_consult
+      title: DOCTOR CONSULT
+    text: What Would You Prefer ?
+  utter_doctor_consult:
+  - buttons:
+    - payload: /doctor_available
+      title: AVAIABLE DOCTOR CALL(CHARGES 59/-)
+    text: Click below
+  utter_finance_benifit:
+  - buttons:
+    - payload: /registration
+      title: REGISTER
+    text: "Please let me conform your Registration\nCLICK Registration Button to register"
+  utter_medicine:
+  - text: Get the medicine with 20% discount
+  utter_emergency:
+  - text: Doctor will come to your home
+  utter_moreinformation:
+  - text: For More Information Kindly Visit Our Website - [ ]{link}
+  utter_thank_feedback:
+  - text: Thank you for your valuable Feedback.
+  utter_feedback:
+  - buttons:
+    - payload: /mood_great
+      title: Very Good
+    - payload: /mood_great
+      title: Good
+    - payload: /mood_unhappy
+      title: Poor
+    text: Overall,How satisfied were you with the Product/Service ?
+  utter_ask_name:
+  - text: 'Enter your Full Name :'
+  utter_ask_number:
+  - text: 'Enter your Mobile number: '
+  utter_ask_email:
+  - text: 'Enter your Email Id:'
+  utter_wrong_number:
+  - text: Entered Mobile number {number} is Invalid please Enter 10 digit mobile Number
+  utter_wrong_email:
+  - text: Entered Email_ID {email} is Incorrect please Enter a correct Email ID.
+  utter_recheck:
+  - text: Please re-check your Details.
+  utter_submit:
+  - text: "Your Registration Process Completed.\nThank you."
+  utter_finalsubmit:
+  - buttons:
+    - payload: /submit
+      title: SUBMIT
+    - payload: /back_me
+      title: BACK TO HOME
+    text: Click Here to Submit or Back to Re-enter
+  utter_slots_value:
+  - text: "I am progressing your Registrations process With this following Details\n\
+      \  Name: {name}\n  Mobile No: {number}\n  E-mail: {email}"
+actions:
+- action_more_info
+- action_hospital_search
+- utter_thank_you
+- action_corona_state
+- action_name_slot
+- action_name_title_slot
+- utter_greet_help
+- utter_greet
+- utter_enter_state
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_greet_name
+- utter_greet_country_name
+- utter_greet_name_help
+- utter_show_country_pm
+- utter_howto_help
+- utter_check_sympton
+- utter_finance_benifit
+- utter_medicine
+- utter_emergency
+- utter_moreinformation
+- utter_doctor_consult
+- utter_thank_feedback
+- utter_feedback
+- utter_ask_name
+- utter_ask_number
+- utter_ask_email
+- utter_submit
+- utter_slots_value
+- utter_finalsubmit
+- utter_recheck
+- utter_wrong_email
+- utter_wrong_number
+forms:
+- registration_form

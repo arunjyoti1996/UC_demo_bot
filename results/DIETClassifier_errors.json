@@ -1,0 +1,22 @@
+[
+  {
+    "text": "india corona status",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "india",
+        "entity": "state"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "country",
+        "start": 0,
+        "end": 5,
+        "value": "india",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]
